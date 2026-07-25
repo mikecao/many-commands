@@ -78,7 +78,7 @@ mc hash [OPTIONS] [INPUT]
 
 | Option | Default | Description |
 |---|---|---|
-| `-n`, `--name` | `sha512` | Hash algorithm |
+| `-n`, `--name` | `sha256` | Hash algorithm |
 | `-d`, `--digest` | `hex` | Output encoding: `hex`, `base64`, `base64url` |
 | `INPUT` | *(random 32 bytes)* | String to hash; if omitted, a random value is hashed |
 
@@ -91,9 +91,9 @@ mc hash -n md5 -d base64url "some text"
 mc hash                          # hash random input
 ```
 
-#### Algorithm aliases
+#### Algorithm commands
 
-Each algorithm is also available as a top-level command (same as `hash --name=<algo>`):
+Each algorithm is also available as a top-level command:
 
 ```bash
 mc sha256 hello

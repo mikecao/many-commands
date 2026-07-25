@@ -10,11 +10,11 @@ use digest::{Digest, ExtendableOutput, Update};
 pub enum HashName {
     #[value(name = "sha224")]
     Sha224,
+    #[default]
     #[value(name = "sha256")]
     Sha256,
     #[value(name = "sha384")]
     Sha384,
-    #[default]
     #[value(name = "sha512")]
     Sha512,
     #[value(name = "sha512-224")]
@@ -66,7 +66,7 @@ pub enum DigestFormat {
 #[derive(Args)]
 pub struct HashArgs {
     /// Hash algorithm
-    #[arg(long, short = 'n', value_enum, default_value_t = HashName::Sha512)]
+    #[arg(long, short = 'n', value_enum, default_value_t = HashName::Sha256)]
     pub name: HashName,
 
     /// Digest output format

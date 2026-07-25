@@ -22,68 +22,68 @@ enum Commands {
     /// Print a random UUID
     Uuid(commands::uuid::UuidArgs),
 
-    // --- algorithm aliases ---
-    /// Alias for `hash --name sha224`
+    // --- hash algorithms ---
+    /// Hash with SHA-224
     #[command(name = "sha224")]
     Sha224(HashAliasArgs),
-    /// Alias for `hash --name sha256`
+    /// Hash with SHA-256
     #[command(name = "sha256")]
     Sha256(HashAliasArgs),
-    /// Alias for `hash --name sha384`
+    /// Hash with SHA-384
     #[command(name = "sha384")]
     Sha384(HashAliasArgs),
-    /// Alias for `hash --name sha512`
+    /// Hash with SHA-512
     #[command(name = "sha512")]
     Sha512(HashAliasArgs),
-    /// Alias for `hash --name sha512-224`
+    /// Hash with SHA-512/224
     #[command(name = "sha512-224")]
     Sha512_224(HashAliasArgs),
-    /// Alias for `hash --name sha512-256`
+    /// Hash with SHA-512/256
     #[command(name = "sha512-256")]
     Sha512_256(HashAliasArgs),
-    /// Alias for `hash --name sha3-224`
+    /// Hash with SHA3-224
     #[command(name = "sha3-224")]
     Sha3_224(HashAliasArgs),
-    /// Alias for `hash --name sha3-256`
+    /// Hash with SHA3-256
     #[command(name = "sha3-256")]
     Sha3_256(HashAliasArgs),
-    /// Alias for `hash --name sha3-384`
+    /// Hash with SHA3-384
     #[command(name = "sha3-384")]
     Sha3_384(HashAliasArgs),
-    /// Alias for `hash --name sha3-512`
+    /// Hash with SHA3-512
     #[command(name = "sha3-512")]
     Sha3_512(HashAliasArgs),
-    /// Alias for `hash --name shake128`
+    /// Hash with SHAKE128
     #[command(name = "shake128")]
     Shake128(HashAliasArgs),
-    /// Alias for `hash --name shake256`
+    /// Hash with SHAKE256
     #[command(name = "shake256")]
     Shake256(HashAliasArgs),
-    /// Alias for `hash --name blake2b512`
+    /// Hash with BLAKE2b-512
     #[command(name = "blake2b512")]
     Blake2b512(HashAliasArgs),
-    /// Alias for `hash --name blake2s256`
+    /// Hash with BLAKE2s-256
     #[command(name = "blake2s256")]
     Blake2s256(HashAliasArgs),
-    /// Alias for `hash --name md5`
+    /// Hash with MD5
     #[command(name = "md5")]
     Md5(HashAliasArgs),
-    /// Alias for `hash --name md4`
+    /// Hash with MD4
     #[command(name = "md4")]
     Md4(HashAliasArgs),
-    /// Alias for `hash --name md2`
+    /// Hash with MD2
     #[command(name = "md2")]
     Md2(HashAliasArgs),
-    /// Alias for `hash --name sha1`
+    /// Hash with SHA-1
     #[command(name = "sha1")]
     Sha1(HashAliasArgs),
-    /// Alias for `hash --name ripemd160`
+    /// Hash with RIPEMD-160
     #[command(name = "ripemd160")]
     Ripemd160(HashAliasArgs),
-    /// Alias for `hash --name sm3`
+    /// Hash with SM3
     #[command(name = "sm3")]
     Sm3(HashAliasArgs),
-    /// Alias for `hash --name whirlpool`
+    /// Hash with Whirlpool
     #[command(name = "whirlpool")]
     Whirlpool(HashAliasArgs),
 }
