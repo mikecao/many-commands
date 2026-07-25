@@ -1,6 +1,6 @@
 # mc
 
-A multi-command toolkit CLI. One binary, many subcommands:
+A CLI that runs many commands. One binary, many subcommands:
 
 ```text
 mc <command> [options]
