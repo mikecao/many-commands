@@ -51,6 +51,23 @@ mc ts          # seconds
 mc ts --ms     # milliseconds
 ```
 
+### `uuid` — Random UUID
+
+Print a random UUID.
+
+```bash
+mc uuid                 # version 4 (default)
+mc uuid --version 4
+mc uuid --version 7     # time-ordered
+mc uuid -v 7
+```
+
+| Option | Default | Description |
+|---|---|---|
+| `-v`, `--version` | `4` | UUID version: `4` (random) or `7` (time-ordered). Aliases: `v4`, `v7` |
+
+App version is still `mc --version` / `mc -V` (not the uuid subcommand).
+
 ### `hash` — Hash a string
 
 Hash input with a chosen algorithm and digest encoding.
@@ -106,7 +123,9 @@ src/
     mod.rs
     ts.rs              # timestamp command
     hash.rs            # hash command + algorithm logic
+    uuid.rs            # UUID generator
 ```
+
 
 ### Adding a command
 

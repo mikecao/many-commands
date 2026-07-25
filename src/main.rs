@@ -19,6 +19,9 @@ enum Commands {
     /// Hash a string (or random input if omitted)
     Hash(HashArgs),
 
+    /// Print a random UUID
+    Uuid(commands::uuid::UuidArgs),
+
     // --- algorithm aliases ---
     /// Alias for `hash --name sha224`
     #[command(name = "sha224")]
@@ -91,6 +94,7 @@ fn main() {
     match cli.command {
         Commands::Ts(args) => commands::ts::run(args),
         Commands::Hash(args) => commands::hash::run(args),
+        Commands::Uuid(args) => commands::uuid::run(args),
         Commands::Sha224(args) => commands::hash::run_alias(HashName::Sha224, args),
         Commands::Sha256(args) => commands::hash::run_alias(HashName::Sha256, args),
         Commands::Sha384(args) => commands::hash::run_alias(HashName::Sha384, args),

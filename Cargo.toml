@@ -23,6 +23,7 @@ sha1 = "0.10"
 sha2 = "0.10"
 sha3 = "0.10"
 sm3 = "0.4"
+uuid = { version = "1", default-features = false, features = ["std"] }
 whirlpool = "0.10"
 
 [profile.release]
