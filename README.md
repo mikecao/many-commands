@@ -153,4 +153,4 @@ src/
 
 ## License
 
-Proprietary / unlicensed unless otherwise stated.
+[MIT](LICENSE)
