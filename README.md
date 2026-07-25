@@ -68,6 +68,22 @@ mc uuid -v 7
 
 App version is still `mc --version` / `mc -V` (not the uuid subcommand).
 
+### `rand` — Random value
+
+Generate a random number or string.
+
+```bash
+mc rand                              # 32-char base62 (default)
+mc rand --output hex --length 32
+mc rand -o int -l 10
+mc rand -o float -l 6
+```
+
+| Option | Default | Description |
+|---|---|---|
+| `-o`, `--output` | `base62` | `base62`, `hex`, `int`, or `float` |
+| `-l`, `--length` | `32` | Characters (base62/hex), digits (int), or decimal places (float) |
+
 ### `hash` — Hash a string
 
 Hash input with a chosen algorithm and digest encoding.
@@ -124,7 +140,9 @@ src/
     ts.rs              # timestamp command
     hash.rs            # hash command + algorithm logic
     uuid.rs            # UUID generator
+    rand.rs            # random number/string generator
 ```
+
 
 
 ### Adding a command
